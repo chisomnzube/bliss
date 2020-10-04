@@ -38,7 +38,7 @@
     <div class="row">
       <div class="col">
         <h3>Passport</h3>
-        <img src="{{ asset('storage/'.$psn->passport) }}" width="150">
+        <img src="{{passportImage($psn->passport)}}" width="150">
         <hr>
         <h3>Personal Detail:</h3>
         <p><b>Title: {{$psn->title}}</b></p>
