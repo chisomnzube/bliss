@@ -49,83 +49,84 @@
                           <div class="row">
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="name" class="input__label">Full name</label>
-                                  <input type="text" name="name" class="form-control input-style "  id="name"  aria-describedby="emailHelp" placeholder="Enter full name">    
+                                  <label for="name" class="input__label">Full name <small>(* required)</small></label>
+                                  <input type="text" name="name" class="form-control input-style "  id="name"  aria-describedby="emailHelp" placeholder="Enter full name" value="{{ old('name') }}">    
                               </div>
                             </div>
 
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="phone" class="input__label">Phone Number</label>
-                                  <input type="text" name="phone" class="form-control input-style "  id="phone"  aria-describedby="emailHelp" placeholder="Enter Phone Number">    
+                                  <label for="phone" class="input__label">Phone Number <small>(* required)</small></label>
+                                  <input type="text" name="phone" class="form-control input-style "  id="phone"  aria-describedby="emailHelp" placeholder="Enter Phone Number" value="{{ old('phone') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="email" class="input__label">Email</label>
-                                  <input type="email" name="email" class="form-control input-style "  id="email"  aria-describedby="emailHelp" placeholder="Enter Email">    
+                                  <label for="email" class="input__label">Email <small>(* required)</small></label>
+                                  <input type="email" name="email" class="form-control input-style "  id="email"  aria-describedby="emailHelp" placeholder="Enter Email" value="{{ old('email') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="city" class="input__label">City</label>
-                                  <input type="text" name="city" class="form-control input-style "  id="city"  aria-describedby="emailHelp" placeholder="Enter City">    
+                                  <label for="city" class="input__label">City <small>(* required)</small></label>
+                                  <input type="text" name="city" class="form-control input-style "  id="city"  aria-describedby="emailHelp" placeholder="Enter City" value="{{ old('
+                                  city') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="lga" class="input__label">LGA</label>
-                                  <input type="text" name="lga" class="form-control input-style "  id="lga"  aria-describedby="emailHelp" placeholder="Enter LGA">    
+                                  <label for="lga" class="input__label">LGA <small>(* required)</small></label>
+                                  <input type="text" name="lga" class="form-control input-style "  id="lga"  aria-describedby="emailHelp" placeholder="Enter LGA" value="{{ old('lga') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="state" class="input__label">Status</label>
-                                  <input type="text" name="state" class="form-control input-style "  id="state"  aria-describedby="emailHelp" placeholder="Enter Status">    
+                                  <label for="state" class="input__label">State <small>(* required)</small></label>
+                                  <input type="text" name="state" class="form-control input-style "  id="state"  aria-describedby="emailHelp" placeholder="Enter Status" value="{{ old('state') }}">    
                               </div>
                             </div>
                             
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="country" class="input__label">Country</label>
-                                  <input type="text" name="country" class="form-control input-style "  id="country"  aria-describedby="emailHelp" placeholder="Enter Country">    
+                                  <label for="country" class="input__label">Country <small>(* required)</small></label>
+                                  <input type="text" name="country" class="form-control input-style "  id="country"  aria-describedby="emailHelp" placeholder="Enter Country" value="{{ old('country') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="address" class="input__label">Address</label>
-                                  <input type="text" name="address" class="form-control input-style "  id="address"  aria-describedby="emailHelp" placeholder="Enter Address">    
+                                  <label for="address" class="input__label">Address <small>(* required)</small></label>
+                                  <input type="text" name="address" class="form-control input-style "  id="address"  aria-describedby="emailHelp" placeholder="Enter Address" value="{{ old('address') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="occupation" class="input__label">occupation</label>
-                                  <input type="text" name="occupation" class="form-control input-style "  id="occupation"  aria-describedby="emailHelp" placeholder="Enter occupation">    
+                                  <label for="occupation" class="input__label">occupation <small>(* required)</small></label>
+                                  <input type="text" name="occupation" class="form-control input-style "  id="occupation"  aria-describedby="emailHelp" placeholder="Enter occupation" value="{{ old('occupation') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="dob" class="input__label">Date Of Birth</label>
-                                  <input type="date" name="dob" class="form-control input-style "  id="dob"  aria-describedby="emailHelp" placeholder="Enter Date Of Birth">    
+                                  <label for="dob" class="input__label">Date Of Birth <small>(* required)</small></label>
+                                  <input type="date" name="dob" class="form-control input-style "  id="dob"  aria-describedby="emailHelp" placeholder="Enter Date Of Birth" value="{{ old('dob') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="psn" class="input__label">PSN</label>
-                                  <input type="text" name="psn" class="form-control input-style "  id="psn"  aria-describedby="emailHelp" placeholder="Enter PSN">    
+                                  <label for="psn" class="input__label">PSN <small>(* required)</small></label>
+                                  <input type="text" name="psn" class="form-control input-style "  id="psn"  aria-describedby="emailHelp" placeholder="Enter PSN" value="{{ old('psn') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="tax" class="input__label">Tax ID</label>
-                                  <input type="text" name="tax" class="form-control input-style "  id="tax"  aria-describedby="emailHelp" placeholder="Enter Tax ID">    
+                                  <label for="tax" class="input__label">Tax ID <small>(* required)</small></label>
+                                  <input type="text" name="tax" class="form-control input-style "  id="tax"  aria-describedby="emailHelp" placeholder="Enter Tax ID" value="{{ old('tax') }}">    
                               </div>
                             </div>
                             
@@ -138,7 +139,7 @@
                           <div class="row">
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="class" class="input__label">Select class</label>   
+                                  <label for="class" class="input__label">Select class <small>(* required)</small></label>   
                                   <select name="class" class="form-control input-style "  id="class">
                                       <option>Select Class</option>
                                       <option value="truck">truck</option>
@@ -159,127 +160,127 @@
 
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="type" class="input__label">type</label>
-                                  <input type="text" name="type" class="form-control input-style "  id="type"  aria-describedby="emailHelp" placeholder="Enter type">    
+                                  <label for="type" class="input__label">type <small>(* required)</small></label>
+                                  <input type="text" name="type" class="form-control input-style "  id="type"  aria-describedby="emailHelp" placeholder="Enter type" value="{{ old('type') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="licence_number" class="input__label">licence number</label>
-                                  <input type="text" name="licence_number" class="form-control input-style "  id="licence_number"  aria-describedby="emailHelp" placeholder="Enter licence number">    
+                                  <label for="licence_number" class="input__label">licence number <small>(* required)</small></label>
+                                  <input type="text" name="licence_number" class="form-control input-style "  id="licence_number"  aria-describedby="emailHelp" placeholder="Enter licence number" value="{{ old('licence_number') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="por" class="input__label">Place of Registration</label>
-                                  <input type="text" name="por" class="form-control input-style "  id="por"  aria-describedby="emailHelp" placeholder="Enter Place of Registration">    
+                                  <label for="por" class="input__label">Place of Registration <small>(* required)</small></label>
+                                  <input type="text" name="por" class="form-control input-style "  id="por"  aria-describedby="emailHelp" placeholder="Enter Place of Registration" value="{{ old('por') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="model" class="input__label">model</label>
-                                  <input type="text" name="model" class="form-control input-style "  id="model"  aria-describedby="emailHelp" placeholder="Enter model">    
+                                  <label for="model" class="input__label">model <small>(* required)</small></label>
+                                  <input type="text" name="model" class="form-control input-style "  id="model"  aria-describedby="emailHelp" placeholder="Enter model" value="{{ old('model') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="model_code" class="input__label">model code</label>
-                                  <input type="text" name="model_code" class="form-control input-style "  id="model_code"  aria-describedby="emailHelp" placeholder="Enter model code">    
+                                  <label for="model_code" class="input__label">model code <small>(* required)</small></label>
+                                  <input type="text" name="model_code" class="form-control input-style "  id="model_code"  aria-describedby="emailHelp" placeholder="Enter model code" value="{{ old('model_code') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="manufactured_year" class="input__label">manufactured year</label>
-                                  <input type="text" name="manufactured_year" class="form-control input-style "  id="manufactured_year"  aria-describedby="emailHelp" placeholder="Enter manufactured year">    
-                              </div>
-                            </div>
-                            
-                            <div class="col-md-3">
-                              <div class="form-group">
-                                  <label for="status" class="input__label">status</label>
-                                  <input type="text" name="status" class="form-control input-style "  id="status"  aria-describedby="emailHelp" placeholder="Enter status">    
+                                  <label for="manufactured_year" class="input__label">manufactured year <small>(* required)</small></label>
+                                  <input type="text" name="manufactured_year" class="form-control input-style "  id="manufactured_year"  aria-describedby="emailHelp" placeholder="Enter manufactured year" value="{{ old('manufactured_year') }}">    
                               </div>
                             </div>
                             
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="engine_number" class="input__label">engine number</label>
-                                  <input type="text" name="engine_number" class="form-control input-style "  id="engine_number"  aria-describedby="emailHelp" placeholder="Enter engine number">    
+                                  <label for="status" class="input__label">status <small>(* required)</small></label>
+                                  <input type="text" name="status" class="form-control input-style "  id="status"  aria-describedby="emailHelp" placeholder="Enter status" value="{{ old('status') }}">    
+                              </div>
+                            </div>
+                            
+                            <div class="col-md-3">
+                              <div class="form-group">
+                                  <label for="engine_number" class="input__label">engine number <small>(* required)</small></label>
+                                  <input type="text" name="engine_number" class="form-control input-style "  id="engine_number"  aria-describedby="emailHelp" placeholder="Enter engine number" value="{{ old('engine_number') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="chassis_number" class="input__label">chassis number</label>
-                                  <input type="text" name="chassis_number" class="form-control input-style "  id="chassis_number"  aria-describedby="emailHelp" placeholder="Enter chassis number">    
+                                  <label for="chassis_number" class="input__label">chassis number <small>(* required)</small></label>
+                                  <input type="text" name="chassis_number" class="form-control input-style "  id="chassis_number"  aria-describedby="emailHelp" placeholder="Enter chassis number" value="{{ old('chassis_number') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="color" class="input__label">color</label>
-                                  <input type="text" name="color" class="form-control input-style "  id="color"  aria-describedby="emailHelp" placeholder="Enter color">    
+                                  <label for="color" class="input__label">color <small>(* required)</small></label>
+                                  <input type="text" name="color" class="form-control input-style "  id="color"  aria-describedby="emailHelp" placeholder="Enter color" value="{{ old('color') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="body_type" class="input__label">body type</label>
-                                  <input type="text" name="body_type" class="form-control input-style "  id="body_type"  aria-describedby="emailHelp" placeholder="Enter body type">    
+                                  <label for="body_type" class="input__label">body type <small>(* required)</small></label>
+                                  <input type="text" name="body_type" class="form-control input-style "  id="body_type"  aria-describedby="emailHelp" placeholder="Enter body type" value="{{ old('body_type') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="origin" class="input__label">place of origin</label>
-                                  <input type="text" name="origin" class="form-control input-style "  id="origin"  aria-describedby="emailHelp" placeholder="Enter place of origin">    
+                                  <label for="origin" class="input__label">place of origin <small>(* required)</small></label>
+                                  <input type="text" name="origin" class="form-control input-style "  id="origin"  aria-describedby="emailHelp" placeholder="Enter place of origin" value="{{ old('origin') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="cylinder_capacity" class="input__label">cylinder capacity</label>
-                                  <input type="text" name="cylinder_capacity" class="form-control input-style "  id="cylinder_capacity"  aria-describedby="emailHelp" placeholder="Enter cylinder capacity">    
+                                  <label for="cylinder_capacity" class="input__label">cylinder capacity <small>(* required)</small></label>
+                                  <input type="text" name="cylinder_capacity" class="form-control input-style "  id="cylinder_capacity"  aria-describedby="emailHelp" placeholder="Enter cylinder capacity" value="{{ old('cylinder_capacity') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="rated_power" class="input__label">rated power</label>
-                                  <input type="text" name="rated_power" class="form-control input-style "  id="rated_power"  aria-describedby="emailHelp" placeholder="Enter rated power">    
+                                  <label for="rated_power" class="input__label">rated power <small>(* required)</small></label>
+                                  <input type="text" name="rated_power" class="form-control input-style "  id="rated_power"  aria-describedby="emailHelp" placeholder="Enter rated power" value="{{ old('rated_power') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="seating_capacity" class="input__label">seating capacity</label>
-                                  <input type="text" name="seating_capacity" class="form-control input-style "  id="seating_capacity"  aria-describedby="emailHelp" placeholder="Enter seating capacity">    
+                                  <label for="seating_capacity" class="input__label">seating capacity <small>(* required)</small></label>
+                                  <input type="text" name="seating_capacity" class="form-control input-style "  id="seating_capacity"  aria-describedby="emailHelp" placeholder="Enter seating capacity" value="{{ old('seating_capacity') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="propulsion" class="input__label">propulsion</label>
-                                  <input type="text" name="propulsion" class="form-control input-style "  id="propulsion"  aria-describedby="emailHelp" placeholder="Enter propulsion">    
+                                  <label for="propulsion" class="input__label">propulsion <small>(* required)</small></label>
+                                  <input type="text" name="propulsion" class="form-control input-style "  id="propulsion"  aria-describedby="emailHelp" placeholder="Enter propulsion" value="{{ old('propulsion') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="steering" class="input__label">steering</label>
-                                  <input type="text" name="steering" class="form-control input-style "  id="steering"  aria-describedby="emailHelp" placeholder="Enter steering">    
+                                  <label for="steering" class="input__label">steering <small>(* required)</small></label>
+                                  <input type="text" name="steering" class="form-control input-style "  id="steering"  aria-describedby="emailHelp" placeholder="Enter steering" value="{{ old('steering') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="tire_no" class="input__label">No of tire</label>
-                                  <input type="text" name="tire_no" class="form-control input-style "  id="tire_no"  aria-describedby="emailHelp" placeholder="Enter No of tire">    
+                                  <label for="tire_no" class="input__label">No of tire <small>(* required)</small></label>
+                                  <input type="text" name="tire_no" class="form-control input-style "  id="tire_no"  aria-describedby="emailHelp" placeholder="Enter No of tire" value="{{ old('tire_no') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="door_no" class="input__label">No of Door</label>
-                                  <input type="text" name="door_no" class="form-control input-style "  id="door_no"  aria-describedby="emailHelp" placeholder="Enter No of Door">    
+                                  <label for="door_no" class="input__label">No of Door </label>
+                                  <input type="text" name="door_no" class="form-control input-style "  id="door_no"  aria-describedby="emailHelp" placeholder="Enter No of Door" value="{{ old('door_no') }}">    
                               </div>
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="gps" class="input__label">GPS</label><br>
+                                  <label for="gps" class="input__label">GPS <small>(* required)</small></label><br>
                                   <input type="radio" name="gps" value="yes"  > YES
                                   <input type="radio" name="gps" value="no" > NO
 
@@ -287,7 +288,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="airbag" class="input__label">Airbag</label><br>
+                                  <label for="airbag" class="input__label">Airbag <small>(* required)</small></label><br>
                                   <input type="radio" name="airbag" value="yes"  > YES
                                   <input type="radio" name="airbag" value="no" > NO
 
@@ -295,7 +296,7 @@
                             </div>
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="tracker" class="input__label">Tracker</label><br>
+                                  <label for="tracker" class="input__label">Tracker <small>(* required)</small></label><br>
                                   <input type="radio" name="tracker" value="yes"  > YES
                                   <input type="radio" name="tracker" value="no" > NO
 
@@ -312,32 +313,32 @@
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group">
-                                  <label for="insurance_company" class="input__label">insurance company</label>
-                                  <input type="text" name="insurance_company" class="form-control input-style "  id="insurance_company"  aria-describedby="emailHelp" placeholder="Enter insurance company">    
+                                  <label for="insurance_company" class="input__label">insurance company <small>(* required)</small></label>
+                                  <input type="text" name="insurance_company" class="form-control input-style "  id="insurance_company"  aria-describedby="emailHelp" placeholder="Enter insurance company" value="{{ old('insurance_company') }}">    
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                  <label for="policy_holder" class="input__label">policy holder</label>
-                                  <input type="text" name="policy_holder" class="form-control input-style "  id="policy_holder"  aria-describedby="emailHelp" placeholder="Enter policy holder">    
+                                  <label for="policy_holder" class="input__label">policy holder <small>(* required)</small></label>
+                                  <input type="text" name="policy_holder" class="form-control input-style "  id="policy_holder"  aria-describedby="emailHelp" placeholder="Enter policy holder" value="{{ old('policy_holder') }}">    
                               </div>
                             </div>
                             <div class="col-md-12">
                               <div class="form-group">
-                                  <label for="policy_note" class="input__label">policy note</label>
-                                  <textarea name="policy_note" class="form-control input-style "  id="policy_note"></textarea>   
+                                  <label for="policy_note" class="input__label">policy note <small>(* required)</small></label>
+                                  <textarea name="policy_note" class="form-control input-style "  id="policy_note">{{ old('title') }}</textarea>   
                               </div>
                             </div> 
                             <div class="col-md-6">
                               <div class="form-group">
-                                  <label for="effective_date_from" class="input__label">effective date from</label>
-                                  <input type="date" name="effective_date_from" class="form-control input-style "  id="effective_date_from"  aria-describedby="emailHelp" placeholder="Enter effective date from">    
+                                  <label for="effective_date_from" class="input__label">effective date from <small>(* required)</small></label>
+                                  <input type="date" name="effective_date_from" class="form-control input-style "  id="effective_date_from"  aria-describedby="emailHelp" placeholder="Enter effective date from" value="{{ old('effective_date_from') }}">    
                               </div>
                             </div>
                             <div class="col-md-6">
                               <div class="form-group">
-                                  <label for="effective_date_to" class="input__label">effective date to</label>
-                                  <input type="date" name="effective_date_to" class="form-control input-style "  id="effective_date_to"  aria-describedby="emailHelp" placeholder="Enter effective date to">    
+                                  <label for="effective_date_to" class="input__label">effective date to <small>(* required)</small></label>
+                                  <input type="date" name="effective_date_to" class="form-control input-style "  id="effective_date_to"  aria-describedby="emailHelp" placeholder="Enter effective date to" value="{{ old('effective_date_to') }}">    
                               </div>
                             </div>                           
                             
@@ -350,54 +351,54 @@
                           <div class="row">
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="ecp_name" class="input__label">ECP name</label>
-                                  <input type="text" name="ecp_name" class="form-control input-style "  id="ecp_name"  aria-describedby="emailHelp" placeholder="Enter ECP name">    
+                                  <label for="ecp_name" class="input__label">ECP name <small>(* required)</small></label>
+                                  <input type="text" name="ecp_name" class="form-control input-style "  id="ecp_name"  aria-describedby="emailHelp" placeholder="Enter ECP name" value="{{ old('ecp_name') }}">    
                               </div>
                             </div>
 
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="ecp_phone" class="input__label">ECp phone</label>
-                                  <input type="text" name="ecp_phone" class="form-control input-style "  id="ecp_phone"  aria-describedby="ecp_phoneHelp" placeholder="Enter ECP phone">    
+                                  <label for="ecp_phone" class="input__label">ECp phone <small>(* required)</small></label>
+                                  <input type="text" name="ecp_phone" class="form-control input-style "  id="ecp_phone"  aria-describedby="ecp_phoneHelp" placeholder="Enter ECP phone" value="{{ old('ecp_phone') }}">    
                               </div>
                             </div> 
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="ecp_email" class="input__label">ECP email</label>
-                                  <input type="text" name="ecp_email" class="form-control input-style "  id="ecp_email"  aria-describedby="emailHelp" placeholder="Enter ECP email">    
+                                  <label for="ecp_email" class="input__label">ECP email <small>(* required)</small></label>
+                                  <input type="text" name="ecp_email" class="form-control input-style "  id="ecp_email"  aria-describedby="emailHelp" placeholder="Enter ECP email" value="{{ old('ecp_email') }}">    
                               </div>
                             </div>
 
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="ecp_city" class="input__label">ECP city</label>
-                                  <input type="text" name="ecp_city" class="form-control input-style "  id="ecp_city"  aria-describedby="ecp_cityHelp" placeholder="Enter ECP city">    
+                                  <label for="ecp_city" class="input__label">ECP city <small>(* required)</small></label>
+                                  <input type="text" name="ecp_city" class="form-control input-style "  id="ecp_city"  aria-describedby="ecp_cityHelp" placeholder="Enter ECP city" value="{{ old('ecp_city') }}">    
                               </div>
                             </div>    
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="ecp_lga" class="input__label">ECP lga</label>
-                                  <input type="text" name="ecp_lga" class="form-control input-style "  id="ecp_lga"  aria-describedby="emailHelp" placeholder="Enter ECP lga">    
+                                  <label for="ecp_lga" class="input__label">ECP lga <small>(* required)</small></label>
+                                  <input type="text" name="ecp_lga" class="form-control input-style "  id="ecp_lga"  aria-describedby="emailHelp" placeholder="Enter ECP lga" value="{{ old('ecp_lga') }}">    
                               </div>
                             </div>
 
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="ecp_state" class="input__label">ECP state</label>
-                                  <input type="text" name="ecp_state" class="form-control input-style "  id="ecp_state"  aria-describedby="ecp_stateHelp" placeholder="Enter ECP state">    
+                                  <label for="ecp_state" class="input__label">ECP state <small>(* required)</small></label>
+                                  <input type="text" name="ecp_state" class="form-control input-style "  id="ecp_state"  aria-describedby="ecp_stateHelp" placeholder="Enter ECP state" value="{{ old('ecp_state') }}">    
                               </div>
                             </div> 
                             <div class="col-md-3">
                               <div class="form-group">
-                                  <label for="ecp_country" class="input__label">ECP country</label>
-                                  <input type="text" name="ecp_country" class="form-control input-style "  id="ecp_country"  aria-describedby="emailHelp" placeholder="Enter ECP country">    
+                                  <label for="ecp_country" class="input__label">ECP country <small>(* required)</small></label>
+                                  <input type="text" name="ecp_country" class="form-control input-style "  id="ecp_country"  aria-describedby="emailHelp" placeholder="Enter ECP country" value="{{ old('ecp_country') }}">    
                               </div>
                             </div>
 
                             <div class="col-md-12">
                               <div class="form-group">
-                                  <label for="ecp_address" class="input__label">ECP address</label>  
-                                  <textarea name="ecp_address" class="form-control input-style "  id="ecp_address"></textarea>  
+                                  <label for="ecp_address" class="input__label">ECP address <small>(* required)</small></label>  
+                                  <textarea name="ecp_address" class="form-control input-style "  id="ecp_address">{{ old('ecp_address') }}</textarea>  
                               </div>
                             </div>                            
                             
@@ -407,7 +408,7 @@
 
                         
                         <div class="form-group">
-                            <label for="passport" class="input__label">Document</label>
+                            <label for="passport" class="input__label">Document <small>(* required)</small></label>
                             <input type="file" name="document" class="form-control input-style "  id="document">    
                         </div>
 

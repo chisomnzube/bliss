@@ -20,7 +20,7 @@ Author URL: http://w3layouts.com
 
 
     <div class="logo-icon text-center">
-      <a href="{{ route('landingpage') }}" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
+      <a href="{{ route('landingpage') }}" title="logo"><img src="{{ asset('assets/images/logo.png') }}" alt="logo-icon"> </a>
     </div>
     <!-- //logo end -->
 
@@ -66,10 +66,44 @@ Author URL: http://w3layouts.com
     </div>
   </div>
   <!-- //sidebar menu end -->
-  <!-- header-starts -->
+   <!-- header-starts -->
   <div class="header sticky-header">
 
-
+    <!-- notification menu start -->
+    <div class="menu-right">
+      <div class="navbar user-panel-top">
+        
+        <div class="user-dropdown-details d-flex">
+          
+          <div class="profile_details">
+            <nav class="navbar navbar-expand-lg navbar-light {{-- bg-light --}}">
+              <a class="navbar-brand" href="{{ route('landingpage') }}">{{config('app.name')}}</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  {{-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li> --}}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('about') }}">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ route('contact') }}">contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="{{ route('faq') }}">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--notification menu end -->
   </div>
   <!-- //header-ends -->
 

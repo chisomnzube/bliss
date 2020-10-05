@@ -267,18 +267,7 @@
                                   <input type="text" name="relationship" class="form-control input-style "  id="relationship"  aria-describedby="emailHelp" placeholder="Enter relationship" value="{{$psn->relationship}}">    
                               </div>
                             </div>
-                            <div class="col-md-3">
-                              <div class="form-group">
-                                  <label for="health_status" class="input__label">health status</label>
-                                  <input type="text" name="health_status" class="form-control input-style "  id="health_status"  aria-describedby="emailHelp" placeholder="Enter health status" value="{{$psn->health_status}}">    
-                              </div>
-                            </div>
-                            <div class="col-md-3">
-                              <div class="form-group">
-                                  <label for="security_status" class="input__label">security status</label>
-                                  <input type="text" name="security_status" class="form-control input-style "  id="security_status"  aria-describedby="emailHelp" placeholder="Enter security status" value="{{$psn->security_status}}">    
-                              </div>
-                            </div>
+                            
                           </div>
                           
                         </fieldset>

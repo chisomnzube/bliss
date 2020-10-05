@@ -147,7 +147,6 @@ class CompanyInfoController extends Controller
             'id_type' => 'required',
             'position' => 'required',
             'psn' => 'required',
-            'security_status' => 'required',
             'document' => 'required',
         ]);
 
@@ -218,7 +217,6 @@ class CompanyInfoController extends Controller
             'id_type' => $request->input('id_type'),
             'position' => $request->input('position'),
             'psn' => $request->input('psn'),
-            'security_status' => $request->input('security_status'),
             'document' => 'data/'.$fileNameToStore,
             'csn' => $csn,
         ]);
@@ -318,7 +316,6 @@ class CompanyInfoController extends Controller
             'id_number' => 'required',
             'id_type' => 'required',
             'position' => 'required',
-            'security_status' => 'required',
         ]);
 
         $psn = PersonalDetail::where('email', auth()->user()->email)->first();
@@ -382,7 +379,6 @@ class CompanyInfoController extends Controller
             'id_number' => $request->input('id_number'),
             'id_type' => $request->input('id_type'),
             'position' => $request->input('position'),
-            'security_status' => $request->input('security_status'),
         ]);
 
         //return back

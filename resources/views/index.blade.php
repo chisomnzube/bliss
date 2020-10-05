@@ -35,107 +35,46 @@
         {{-- <p>Very detailed & featured admin.</p> --}}
       </div>
     @endauth
-    <div class="row">
-      <div class="col">
-        <form action="{{ route('personal.search') }}" method="GET" class="form-group">
-          <input type="text" name="psn" class="form-control">
-          <br>
-          <button type="submit" class="btn btn-info">Search PSN</button>
-        </form>
-      </div>
-      <div class="col">
-        <form action="{{ route('company.search') }}" method="GET" class="form-group">
-          <input type="text" name="csn" class="form-control">
-          <br>
-          <button type="submit" class="btn btn-info">Search CSN</button>
-        </form>
-      </div>
-    </div>
-    <!-- statistics data -->
-    <div class="statistics">
+    <form action="{{ route('search') }}" method="GET">
+      @csrf
       <div class="row">
-        <div class="col-xl-6 pr-xl-2">
-          <div class="row">
-            <div class="col-sm-6 pr-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-users"> </i>
-                <h3 class="text-primary number">29.75 M</h3>
-                <p class="stat-text">Total Users</p>
-              </div>
-            </div>
-            <div class="col-sm-6 pl-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-eye"> </i>
-                <h3 class="text-secondary number">51.25 K</h3>
-                <p class="stat-text">Daily Visitors</p>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-3 form-group">
+          <select name="type" class="form-control">
+              <option>Select Type</option>
+              <option value="psn">PSN</option>
+              <option value="csn">CSN</option>
+          </select>
         </div>
-        <div class="col-xl-6 pl-xl-2">
-          <div class="row">
-            <div class="col-sm-6 pr-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-cloud-download"> </i>
-                <h3 class="text-success number">166.89 M</h3>
-                <p class="stat-text">Downloads</p>
-              </div>
-            </div>
-            <div class="col-sm-6 pl-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-cart"> </i>
-                <h3 class="text-danger number">1,250k</h3>
-                <p class="stat-text">Purchased</p>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-7 form-group">
+          <input type="text" name="id" class="form-control">
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-info">Search</button>
         </div>
       </div>
-    </div>
-    <!-- //statistics data -->
-    <!-- statistics data -->
-    <div class="statistics">
-      <div class="row">
-        <div class="col-xl-6 pr-xl-2">
-          <div class="row">
-            <div class="col-sm-6 pr-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-users"> </i>
-                <h3 class="text-primary number">29.75 M</h3>
-                <p class="stat-text">Total Users</p>
-              </div>
-            </div>
-            <div class="col-sm-6 pl-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-eye"> </i>
-                <h3 class="text-secondary number">51.25 K</h3>
-                <p class="stat-text">Daily Visitors</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-6 pl-xl-2">
-          <div class="row">
-            <div class="col-sm-6 pr-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-cloud-download"> </i>
-                <h3 class="text-success number">166.89 M</h3>
-                <p class="stat-text">Downloads</p>
-              </div>
-            </div>
-            <div class="col-sm-6 pl-sm-2 statistics-grid">
-              <div class="card card_border border-primary-top p-4">
-                <i class="lnr lnr-cart"> </i>
-                <h3 class="text-danger number">1,250k</h3>
-                <p class="stat-text">Purchased</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- //statistics data -->
+    </form>
 
+
+        
+          
+        
+    
+   @if($posts->count() > 0)
+    <div class="row">
+    @foreach($posts as $post)
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{passportImage($post->image)}}" alt="{{$post->title}}">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{{ route('post.show', $post->slug) }}" >{{$post->title}}</a></h5>
+            <p class="card-text">{{ str_limit(strip_tags($post->body), 150) }}</p>
+            <a href="{{ route('post.show', $post->slug) }}" class="btn btn-primary">view</a>
+          </div>
+        </div>
+      </div> 
+    @endforeach
+    </div>
+   @endif
 
   </div>
   <!-- //content -->

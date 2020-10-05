@@ -46,8 +46,8 @@ class CreatePersonalDetailsTable extends Migration
             $table->string('ecp_phone');
             $table->string('relationship');
             $table->string('ecp_psn')->nullable();
-            $table->string('health_status');
-            $table->string('security_status');
+            $table->string('health_status')->nullable();
+            $table->string('security_status')->nullable();
             $table->string('phone');
             $table->string('email');
             $table->string('facebook')->nullable();

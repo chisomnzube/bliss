@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\CompanyInfo;
+use App\Contact;
+use App\PersonalDetail;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use TCG\Voyager\Models\Post;
 
 class LandingpageController extends Controller
 {
@@ -14,7 +19,12 @@ class LandingpageController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $posts = Post::where('status', 'PUBLISHED')->get();
+
+        return view('index')->with([
+            'posts' => $posts,
+
+        ]);
     }
 
     /**
@@ -22,20 +32,33 @@ class LandingpageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function search(Request $request)
     {
         $request->validate([
-            'user' => 'required|min:3',
+            'id' => 'required|max:10|min:10',
+            'type' => ['required', Rule::in(['psn', 'csn'])],
         ]);
 
-        $theuser = $request->input('user');
+        $type = $request->input('type');
 
-        $users = User::search($theuser)->paginate(12);
 
-        return view('search')->with([
-                    'users' => $users,
-                    'item' => $theuser,
-                ]);
+        if ($type == 'psn') 
+            {
+                $psn = $request->input('id');
+                $result = PersonalDetail::where('psn', $psn)->where('featured', 1)->firstOrFail();
+
+                return view('personal-search')->with([
+                            'psn' => $result,
+                        ]);
+            }else
+                {
+                    $csn = $request->input('id');
+                    $result = CompanyInfo::where('csn', $csn)->where('featured', 1)->firstOrFail();
+
+                    return view('company-search')->with([
+                                'csn' => $result,
+                            ]);
+                }
     }
 
     /**
@@ -46,18 +69,37 @@ class LandingpageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd('hey');
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'body' => 'required',
+        ]);
+
+        Contact::create([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'body' => $request->input('body'),
+        ]);
+
+        return back()->with('success_message', 'Your message has been sent successfully!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $post = Post::where('slug', $slug)->where('status', 'PUBLISHED')->firstOrFail();
+
+        return view('post-single')->with([
+                    'post' => $post,
+                ]);
     }
 
     /**

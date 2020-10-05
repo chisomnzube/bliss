@@ -286,14 +286,7 @@
                                   <input type="text" name="position" class="form-control input-style "  id="position"  aria-describedby="positionHelp" placeholder="Enter position" value="{{$csn->position}}">    
                               </div>
                             </div> 
-                            
-
-                            <div class="col-md-3">
-                              <div class="form-group">
-                                  <label for="security_status" class="input__label">security status</label>
-                                  <input type="text" name="security_status" class="form-control input-style "  id="security_status"  aria-describedby="security_statusHelp" placeholder="Enter security status" value="{{$csn->security_status}}">    
-                              </div>
-                            </div>                             
+                                                       
                             
                           </div>
                           

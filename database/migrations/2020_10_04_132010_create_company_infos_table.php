@@ -56,7 +56,7 @@ class CreateCompanyInfosTable extends Migration
             $table->string('id_type');
             $table->string('position');
             $table->string('psn');
-            $table->string('security_status');
+            $table->string('security_status')->nullable();
             $table->string('rating')->nullable();
             $table->text('document');
             $table->string('csn')->nullable();

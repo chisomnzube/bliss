@@ -11,10 +11,21 @@
 |
 */
 
-Route::get('/', 'LandingpageController@index')->name('landingpage');
 
-//route for search
-//Route::get('/search', 'LandingpageController@create')->name('search');
+//other routes
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
+Route::post('/contact-store', 'LandingpageController@store')->name('contact.store');
 
 //route for personal details
 Route::get('/personal-detail', 'PersonalDetailController@index')->name('personal.index');
@@ -47,8 +58,14 @@ Route::get('/the-Login', 'PersonalDetailController@login')->name('personal.login
 
 //route for authenticted functions
 Route::middleware('auth')->group(function () {
-	Route::get('/search-csn', 'CompanyInfoController@search')->name('company.search');
-	Route::get('/search-psn', 'PersonalDetailController@search')->name('personal.search');
+	// Route::get('/search-csn', 'CompanyInfoController@search')->name('company.search');
+	// Route::get('/search-psn', 'PersonalDetailController@search')->name('personal.search');
+
+	Route::get('/', 'LandingpageController@index')->name('landingpage');
+	Route::get('/{slug}/post', 'LandingpageController@show')->name('post.show');
+
+	//route for search
+	Route::get('/search', 'LandingpageController@search')->name('search');
 	
 	//my account
 	Route::get('/my-profile', 'UsersController@index')->name('user.index');
