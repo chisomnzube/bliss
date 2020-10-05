@@ -44,7 +44,7 @@ Author URL: http://w3layouts.com
                 @csrf
             </form>
             @else
-            <li><a href="{{ route('personal.login') }}">Login</a></li>
+            <li><a href="/login">Login</a></li>
             <li><a href="{{ route('personal.index') }}">Register Personal Detail</a></li>
             <li><a href="{{ route('company.index') }}">Register Company Info</a></li>
             <li><a href="{{ route('particulars.index') }}">Register Particulars</a></li>
