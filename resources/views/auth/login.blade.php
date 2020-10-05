@@ -37,7 +37,7 @@
             <!-- forms 1 -->
             
                   <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                       <div class="card card_border py-2 mb-4">
                         
                         <div class="card-body">
@@ -61,7 +61,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                       <div class="card card_border py-2 mb-4">
                         
                         <div class="card-body">
