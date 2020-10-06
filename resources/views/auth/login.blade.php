@@ -37,7 +37,7 @@
             <!-- forms 1 -->
             
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="card card_border py-2 mb-4">
                         
                         <div class="card-body">
@@ -61,30 +61,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="card card_border py-2 mb-4">
-                        
-                        <div class="card-body">
-                          <fieldset>
-                            <legend>Company Login</legend>
-                            <form action="{{ route('csnlogin') }}" method="post">
-                            @csrf
-                              <div class="form-group">
-                                  <label for="exampleInputEmail1" class="input__label">CSN</label>
-                                  <input type="text" name="csn" class="form-control input-style " value="{{ old('csn') }}" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="Enter csn">
-                                  
-                              </div>
-                              <div class="form-group">
-                                  <label for="exampleInputPassword1" class="input__label">Password</label>
-                                  <input type="password" name="password" class="form-control input-style " id="exampleInputPassword1"
-                                      placeholder="Password">
-                              </div>
-                              <button type="submit" class="btn btn-primary btn-style mt-4">Login</button>
-                          </form>
-                          </fieldset>
-                        </div>
-                      </div>
-                    </div>
+                    
                   </div>
 
 

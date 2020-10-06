@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\CompanyInfo;
 use App\Contact;
 use App\PersonalDetail;
+use App\Particular;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -35,8 +36,8 @@ class LandingpageController extends Controller
     public function search(Request $request)
     {
         $request->validate([
-            'id' => 'required|max:10|min:10',
-            'type' => ['required', Rule::in(['psn', 'csn'])],
+            // 'id' => 'required|max:10|min:10',
+            'type' => ['required', Rule::in(['psn', 'csn', 'lic'])],
         ]);
 
         $type = $request->input('type');
@@ -50,7 +51,7 @@ class LandingpageController extends Controller
                 return view('personal-search')->with([
                             'psn' => $result,
                         ]);
-            }else
+            }elseif($type == 'csn')
                 {
                     $csn = $request->input('id');
                     $result = CompanyInfo::where('csn', $csn)->where('featured', 1)->firstOrFail();
@@ -58,7 +59,15 @@ class LandingpageController extends Controller
                     return view('company-search')->with([
                                 'csn' => $result,
                             ]);
-                }
+                }else
+                    {
+                        $lic = $request->input('id');
+                        $result = Particular::where('licence_number', $lic)->where('featured', 1)->firstOrFail();
+
+                        return view('particulars-search')->with([
+                                    'lic' => $result,
+                                ]);
+                    }
     }
 
     /**

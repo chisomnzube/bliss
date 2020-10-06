@@ -23,6 +23,11 @@ class CompanyInfoController extends Controller
         return view('company-index');
     }
 
+    public function login()
+    {
+        return view('company-portal');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

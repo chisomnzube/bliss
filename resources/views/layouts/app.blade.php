@@ -44,6 +44,7 @@ Author URL: http://w3layouts.com
                 @csrf
             </form>
             @else
+            <li><a href="{{ route('company.login') }}">Company Portal</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="{{ route('personal.index') }}">Register Personal Detail</a></li>
             <li><a href="{{ route('company.index') }}">Register Company Info</a></li>
@@ -68,42 +69,13 @@ Author URL: http://w3layouts.com
   <!-- //sidebar menu end -->
    <!-- header-starts -->
   <div class="header sticky-header">
-
-    <!-- notification menu start -->
     <div class="menu-right">
       <div class="navbar user-panel-top">
-        
-        <div class="user-dropdown-details d-flex">
-          
-          <div class="profile_details">
-            <nav class="navbar navbar-expand-lg navbar-light {{-- bg-light --}}">
-              <a class="navbar-brand" href="{{ route('landingpage') }}">{{config('app.name')}}</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  {{-- <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li> --}}
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">About us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">contact us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="{{ route('faq') }}">FAQ</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            
-          </div>
-        </div>
+        <a href="{{ route('about') }}" class="btn">About Us</a>
+        <a href="{{ route('contact') }}" class="btn">Contact us</a>
+        <a href="{{ route('faq') }}" class="btn">FAQ</a>
       </div>
     </div>
-    <!--notification menu end -->
   </div>
   <!-- //header-ends -->
 

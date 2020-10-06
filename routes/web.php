@@ -27,6 +27,8 @@ Route::get('/contact', function () {
 
 Route::post('/contact-store', 'LandingpageController@store')->name('contact.store');
 
+Route::get('/company-portal', 'CompanyInfoController@login')->name('company.login');
+
 //route for personal details
 Route::get('/personal-detail', 'PersonalDetailController@index')->name('personal.index');
 Route::get('/personal-detail-confirmation', 'PersonalDetailController@confirm')->name('personal.confirm');

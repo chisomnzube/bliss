@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>{{config('app.name')}}</title>
+  <title>Vehicle Licence plate search | {{config('app.name')}}</title>
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style-starter.css">
@@ -26,7 +26,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb my-breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('landingpage') }}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        <li class="breadcrumb-item active" aria-current="page">Vehicle Licence plate Search</li>
       </ol>
     </nav>
     @auth
@@ -35,47 +35,70 @@
         {{-- <p>Very detailed & featured admin.</p> --}}
       </div>
     @endauth
-    <form action="{{ route('search') }}" method="GET">
-      @csrf
-      <div class="row">
-        <div class="col-md-3 form-group">
-          <select name="type" class="form-control">
-              <option>Select Type</option>
-              <option value="psn">PSN</option>
-              <option value="csn">CSN</option>
-              <option value="lic">Vehicle Licence plate</option>
-          </select>
-        </div>
-        <div class="col-md-7 form-group">
-          <input type="text" name="id" class="form-control">
-        </div>
-        <div class="col-md-2">
-          <button type="submit" class="btn btn-info">Search</button>
-        </div>
-      </div>
-    </form>
-
-
-        
-          
-        
-    
-   @if($posts->count() > 0)
     <div class="row">
-    @foreach($posts as $post)
-      <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="{{passportImage($post->image)}}" alt="{{$post->title}}">
-          <div class="card-body">
-            <h5 class="card-title"><a href="{{ route('post.show', $post->slug) }}" >{{$post->title}}</a></h5>
-            <p class="card-text">{{ str_limit(strip_tags($post->body), 150) }}</p>
-            <a href="{{ route('post.show', $post->slug) }}" class="btn btn-primary">view</a>
-          </div>
-        </div>
-      </div> 
-    @endforeach
+      <div class="col">
+        <h3>Particulars of owner</h3>
+        <p><b>Name: {{$lic->name}}</b></p>
+        <p><b>Phone Number: {{$lic->phone}}</b></p>
+        <p><b>Email: {{$lic->email}}</b></p>
+        <p><b>City: {{$lic->city}}</b></p>
+        <p><b>LGA: {{$lic->lga}}</b></p>
+        <p><b>State: {{$lic->state}}</b></p>
+        <p><b>Country: {{$lic->country}}</b></p>
+        <p><b>Address: {{$lic->address}}</b></p>
+        <p><b>Occupation: {{$lic->occupation}}</b></p>
+        <p><b>Date of birth: {{$lic->dob}}</b></p>
+        <p><b>PSN: {{$lic->psn}}</b></p>
+        <p><b>Tax ID: {{$lic->tax}}</b></p>        
+        <hr>
+        <h3>Risk insurance</h3>
+        <p><b>Insurance Company: {{$lic->insurance_company}}</b></p>
+        <p><b>Policy holder: {{$lic->policy_holder}}</b></p>
+        <p><b>Policy Note: {{$lic->policy_note}}</b></p>
+        <p><b>Effective date from: {{$lic->effective_date_from}}</b></p>
+        <p><b>Effective date to: {{$lic->effective_date_to}}</b></p>
+        <hr>
+        <h3>Emergency Contact person</h3>
+        <p><b>ECP Name: {{$lic->ecp_name}}</b></p>
+        <p><b>ECP Phone Number: {{$lic->ecp_phone}}</b></p>
+        <p><b>ECP Email: {{$lic->ecp_email}}</b></p>
+        <p><b>ECP City: {{$lic->ecp_city}}</b></p>
+        <p><b>ECP LGA: {{$lic->ecp_lga}}</b></p>
+        <p><b>ECP State: {{$lic->ecp_state}}</b></p>
+        <p><b>ECP Country: {{$lic->ecp_country}}</b></p>
+        <p><b>ECP Address: {{$lic->ecp_address}}</b></p>
+        
+      </div>
+      <div class="col">
+        <h3>Particulars of Automobile</h3>
+        <p><b>Class: {{$lic->class}}</b></p>
+        <p><b>Type: {{$lic->type}}</b></p>
+        <p><b>Licence Number: {{$lic->licence_number}}</b></p>
+        <p><b>Place of Registration: {{$lic->por}}</b></p>
+        <p><b>Model: {{$lic->model}}</b></p>
+        <p><b>Model Code: {{$lic->model_code}}</b></p>
+        <p><b>Manufactured Year: {{$lic->manufactured_year}}</b></p>
+        <p><b>Status: {{$lic->status}}</b></p>
+        <p><b>engine Number: {{$lic->engine_number}}</b></p>
+        <p><b>Chassis Number: {{$lic->chassis_number}}</b></p>
+        <p><b>Color: {{$lic->color}}</b></p>
+        <p><b>Body type: {{$lic->body_type}}</b></p>
+        <p><b>Place of Origin: {{$lic->origin}}</b></p>
+        <p><b>Cylinder Capacity: {{$lic->cylinder_capacity}}</b></p>
+        <p><b>Rated Power: {{$lic->rated_power}}</b></p>
+        <p><b>Seating Capacity: {{$lic->seating_capacity}}</b></p>
+        <p><b>Propulsion: {{$lic->propulsion}}</b></p>
+        <p><b>Steering: {{$lic->steering}}</b></p>
+        <p><b>No of tire: {{$lic->tire_no}}</b></p>
+        <p><b>No of door: {{$lic->door_no}}</b></p>
+        <p><b>GPS: {{$lic->gps}}</b></p>
+        <p><b>Airbag: {{$lic->airbag}}</b></p>
+        <p><b>Tracker: {{$lic->tracker}}</b></p>
+        
+      </div>
     </div>
-   @endif
+
+
 
   </div>
   <!-- //content -->
